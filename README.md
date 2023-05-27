@@ -16,7 +16,7 @@ Live_Site - это сервис для управления недвижимос
 git clone https://github.com/Xteonena/Live_Site.git
 2.Перейдите в директорию проекта:
 cd Live_Site
-3.Создайте и активируйте виртуальное окружение:
+3. Создайте и активируйте виртуальное окружение:
 python -m venv venv
 source venv/bin/activate
 4. Установите зависимости:
