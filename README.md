@@ -33,10 +33,10 @@ python manage.py runserver
 # API
 
 API предоставляет следующие конечные точки:
-/api/properties/ - список всех недвижимостей
-/api/properties/{property_id}/ - информация о конкретной недвижимости
-/api/properties/create/ - создание новой недвижимости
-/api/properties/{property_id}/update/ - обновление информации о недвижимости
-/api/properties/{property_id}/delete/ - удаление недвижимости
-/api/messages/ - список всех сообщений
-/api/messages/create/ - создание нового сообщения
+1. /api/properties/ - список всех недвижимостей
+2. /api/properties/{property_id}/ - информация о конкретной недвижимости
+3. /api/properties/create/ - создание новой недвижимости
+4. /api/properties/{property_id}/update/ - обновление информации о недвижимости
+5. /api/properties/{property_id}/delete/ - удаление недвижимости
+6. /api/messages/ - список всех сообщений
+7. /api/messages/create/ - создание нового сообщения
