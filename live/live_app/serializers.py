@@ -47,7 +47,7 @@ class CommentSerializer(serializers.ModelSerializer):
 
 
 class PropertySerializer(serializers.ModelSerializer):
-    owner = UserSerializer(read_only=True)  # Use UserSerializer for owner
+    owner = UserSerializer(read_only=True)
     property_type = serializers.PrimaryKeyRelatedField(queryset=PropertyType.objects.all())
     images = PropertyImageSerializer(many=True, read_only=True)
     comments = CommentSerializer(many=True, read_only=True)

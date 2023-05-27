@@ -83,7 +83,7 @@ class PropertyViewSet(viewsets.ModelViewSet):
         elif property_id is not None:
             properties = properties.filter(id=property_id)
 
-        elif search_text is not None:  # обновлено
+        elif search_text is not None:
             properties = properties.filter(title__icontains=search_text)
 
         if property_type is not None:
@@ -142,7 +142,7 @@ class PropertyViewSet(viewsets.ModelViewSet):
 
 
 class PropertyTypeViewSet(viewsets.ModelViewSet):
-    queryset = PropertyType.objects.all()  # добавьте сортировку
+    queryset = PropertyType.objects.all()
     serializer_class = PropertyTypeSerializer
     permission_classes = [permissions.AllowAny]
 
@@ -167,15 +167,10 @@ class CommentViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         property_id = self.request.data.get('property_id')
         property_instance = Property.objects.get(id=property_id)
-
-        # Get the initial data
         data = serializer.initial_data
-        # Add the user data to the initial data
         data['user'] = UserSerializer(self.request.user).data
-        # Create a new serializer with the updated data
         new_serializer = CommentSerializer(data=data)
         new_serializer.is_valid(raise_exception=True)
-        # Save the new serializer
         new_serializer.save(user=self.request.user, property=property_instance)
 
 
