@@ -13,14 +13,14 @@ Live_Site - это сервис для управления недвижимос
 # Установка
 
 1. Клонируйте репозиторий:
-git clone https://github.com/Xteonena/Live_Site.git
+### `git clone https://github.com/Xteonena/Live_Site.git`
 2. Перейдите в директорию проекта:
 ### `cd Live_Site`
 3. Создайте и активируйте виртуальное окружение:
-python -m venv venv
-source venv/bin/activate
+### `python -m venv venv`
+### `source venv/bin/activate`
 4. Примените миграции базы данных:
-python manage.py migrate
+### `python manage.py migrate`
 
 # Запуск
 Для запуска сервера разработки выполните следующую команду:
