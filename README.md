@@ -19,9 +19,7 @@ cd Live_Site
 3. Создайте и активируйте виртуальное окружение:
 python -m venv venv
 source venv/bin/activate
-4. Установите зависимости:
-pip install -r requirements.txt
-5. Примените миграции базы данных:
+4. Примените миграции базы данных:
 python manage.py migrate
 
 # Запуск
